@@ -1,0 +1,39 @@
+{
+  "name": "khutz-cli",
+  "description": "Cli for @khutz",
+  "version": "0.0.1",
+  "author": "Khutz",
+  "contributors": [
+    {
+      "name": "Alexis Guzmán",
+      "url": "https://github.com/codingcodax"
+    },
+    {
+      "name": "Oscar Estrada",
+      "url": "https://github.com/OscarStrada"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "frontend"
+  ],
+  "type": "module",
+  "bin": {
+    "myCli": "./dist/index.js"
+  },
+  "devDependencies": {
+    "@types/inquirer": "^9.0.7",
+    "nodemon": "^3.1.7",
+    "typescript": "^5.7.2"
+  },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "inquirer": "^12.1.0"
+  },
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "start": "node dist/index.js",
+    "dev": "nodemon --watch src --exec \"tsc && node dist/index.js\"",
+    "watch": "tsc --watch"
+  }
+}
